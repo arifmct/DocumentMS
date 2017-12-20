@@ -1,0 +1,15 @@
+﻿
+@if (Session["login"].ToString() == "")
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Register", "Create", "Employee")</li>
+        <li>@Html.ActionLink("Login", "Login", "Employee")</li>     
+    </ul>
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("My Account", "Details", "Employee", routeValues: null, htmlAttributes: new { id = ((MVCPapperLess.Models.Employee)Session["emp"]).Id })</li>
+        <li>@Html.ActionLink("Logout", "Logout", "Employee")</li>
+    </ul>
+}

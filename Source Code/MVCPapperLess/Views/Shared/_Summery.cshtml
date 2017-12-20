@@ -1,0 +1,13 @@
+﻿@model IEnumerable<MVCPapperLess.Models.Document>
+
+<div class="container row">
+    <div class="col-md-3" style="background-color:#808080; color:white; padding:30px; font-size:20px; margin:15px;">
+        Document : @Model.Count()
+    </div>
+    <div class="col-md-3" style="background-color:#808080; color:white; padding:30px; font-size:20px; margin:15px;">
+        Versions : @((new MVCPapperLess.Models.dbPaperLessEntities()).Versions.Count())
+    </div>
+    <div class="col-md-4" style="background-color:#808080; color:white; padding:30px; font-size:20px; margin:15px;">
+        This project made by Sadia
+    </div>
+</div>

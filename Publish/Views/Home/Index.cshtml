@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Document Management System</h1>
+    <p class="lead">Manage your document for small or medium office</p>
+</div>
+
+
+@Html.Partial("_Summery", new MVCPapperLess.Models.dbPaperLessEntities().Documents);
